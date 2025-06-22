@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roshan Freelance | Home</title>
+    <!-- Head content from freelance_base.html -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script><script src="https://kit.fontawesome.com/9da37a3f78.js" crossorigin="anonymous"></script><script>tailwind.config={theme:{extend:{colors:{'accent-green-start':'#10b981','accent-green-end':'#84cc16','title-color':'#f8fafc','paragraph-color':'#cbd5e1','card-bg':'#1e293b','border-color':'#334155','bg-dark':'#0f172a'},fontFamily:{heading:['Plus Jakarta Sans','sans-serif'],paragraph:['Lexend','sans-serif']},typography:({theme})=>({DEFAULT:{css:{}}})}}}</script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Lexend:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #0f172a; } .text-gradient { background-image: linear-gradient(to right, #10b981, #84cc16); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .card { background-color: #1e293b; border: 1px solid #334155; border-radius: 0.75rem; transition: all 300ms ease-in-out; } .card-clickable:hover { transform: translateY(-5px); border-color: #10b981; }
+        .outline-btn { background-color: transparent; border: 1px solid #10b981; color: #10b981; padding: 0.7rem 1.5rem; border-radius: 0.5rem; font-weight: 600; transition: all 300ms ease-in-out; cursor: pointer; }
+        .outline-btn:hover { background-color: rgba(16, 185, 129, 0.1); }
+        .filled-btn { background-image: linear-gradient(to right, #10b981, #84cc16); color: #0f172a; padding: 0.75rem 1.75rem; border-radius: 0.5rem; font-weight: 700; transition: all 300ms ease-in-out; cursor: pointer; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2); }
+        .filled-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3); }
+        #profile-dropdown { display: none; } .profile.active #profile-dropdown { display: block; } #mobileNav { transform: translateX(100%); } #mobileNav.active { transform: translateX(0); }
+        
+        /* FIX: This class applies the background image. Make sure the path is correct for your setup! */
+        .hero-section {
+            background: 
+                /* Top layer: Dark, semi-transparent overlay */
+                linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)),
+                /* Bottom layer: Your background image */
+                url('bg.jpg') no-repeat center center/cover;
+        }        
+        details > summary { list-style: none; } details > summary::-webkit-details-marker { display: none; }
+        details[open] summary .fa-plus { display: none; } details:not([open]) summary .fa-minus { display: none; }
+    </style>
+</head>
+<body class="font-paragraph text-paragraph-color flex flex-col items-center p-4">
+
+    <div class="main-container w-full max-w-7xl flex flex-col gap-24">
+        <!-- Navbar -->
+        <nav class="navbar w-full" data-loggedin="true"><div class="flex justify-between items-center py-4"><a href="freelance_home.html" class="flex items-center gap-3"><img src="../../local_static/images/logo.png" alt="Logo" class="h-10 w-10"><p class="font-heading text-2xl font-bold text-title-color">Roshan</p></a><div class="hidden md:flex items-center gap-8 font-semibold text-sm"><a href="freelance_home.html" class="hover:text-accent-green-start text-accent-green-start">Home</a><a href="freelance_services_list.html" class="hover:text-accent-green-start">Services</a><a href="freelance_portfolio.html" class="hover:text-accent-green-start">Portfolio</a><a href="freelance_about.html" class="hover:text-accent-green-start">About</a><a href="freelance_portfolio.html#blog" class="hover:text-accent-green-start">Blog</a><a href="freelance_contact.html" class="hover:text-accent-green-start">Contact</a></div><div class="hidden md:flex items-center gap-4" id="authSection"></div><div class="md:hidden"><i class="fas fa-bars text-2xl cursor-pointer" id="menuToggle"></i></div></div></nav>
+        <div id="mobileNav" class="fixed top-0 right-0 h-full w-72 bg-card-bg z-50 p-6 flex-col gap-6 text-lg transition-transform duration-300 md:hidden"><!-- ... mobile nav html ... --></div>
+
+        <main class="w-full flex flex-col gap-24">
+            <!-- Hero Section -->
+            <section class="hero-section w-full min-h-[70vh] rounded-2xl border-2 border-border-color flex items-center justify-center text-center p-4">
+                <!-- FIX: This class creates the dark overlay for readability. -->
+                <div class="rounded-2xl p-8 max-w-4xl">
+                    <h1 class="font-heading text-5xl md:text-7xl font-extrabold text-title-color leading-tight">From Idea to <span class="text-gradient">Impactful</span> Digital Solution</h1>
+                    <p class="mt-6 text-lg max-w-2xl mx-auto">I partner with businesses and individuals to build high-performance websites and applications that are scalable, secure, and user-centric.</p>
+                    
+                    <!-- FIX: Added responsive flex and width classes to prevent overflow on mobile -->
+                    <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
+                        <a href="freelance_contact.html" class="filled-btn w-full sm:w-auto text-center">Start a Project</a>
+                        <a href="#featured-work" class="outline-btn w-full sm:w-auto text-center">View My Work</a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Stats Section -->
+            <section class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center"><div class="card !p-6"><h2 class="font-heading text-4xl font-extrabold text-gradient">50+</h2><p class="mt-1 text-sm font-medium">Projects Done</p></div><div class="card !p-6"><h2 class="font-heading text-4xl font-extrabold text-gradient">3+</h2><p class="mt-1 text-sm font-medium">Years of Experience</p></div><div class="card !p-6"><h2 class="font-heading text-4xl font-extrabold text-gradient">20+</h2><p class="mt-1 text-sm font-medium">Happy Clients</p></div><div class="card !p-6"><h2 class="font-heading text-4xl font-extrabold text-gradient">100%</h2><p class="mt-1 text-sm font-medium">Satisfaction Rate</p></div></section>
+
+            <!-- Services Section -->
+            <section><div class="text-center mb-12"><p class="font-semibold text-accent-green-start">My Expertise</p><h2 class="font-heading text-4xl md:text-5xl font-extrabold text-title-color">Services to Elevate Your Brand</h2></div><div class="grid grid-cols-1 md:grid-cols-3 gap-8"><div class="card !p-8 text-center"><i class="fas fa-layer-group text-4xl text-gradient mb-4"></i><h3 class="font-heading text-2xl font-bold text-title-color">Full-Stack Development</h3><p class="text-paragraph-color/80 my-4 text-sm flex-grow">End-to-end web application development, from database to user interface.</p><a href="freelance_service_dtl.html" class="outline-btn !text-sm mt-4">Learn More</a></div><div class="card !p-8 text-center"><i class="fas fa-drafting-compass text-4xl text-gradient mb-4"></i><h3 class="font-heading text-2xl font-bold text-title-color">UI/UX Design</h3><p class="text-paragraph-color/80 my-4 text-sm flex-grow">Creating intuitive and beautiful user experiences that engage and convert.</p><a href="freelance_service_dtl.html" class="outline-btn !text-sm mt-4">Learn More</a></div><div class="card !p-8 text-center"><i class="fas fa-rocket text-4xl text-gradient mb-4"></i><h3 class="font-heading text-2xl font-bold text-title-color">SEO & Performance</h3><p class="text-paragraph-color/80 my-4 text-sm flex-grow">Optimizing your site for search engines and lightning-fast load times.</p><a href="freelance_service_dtl.html" class="outline-btn !text-sm mt-4">Learn More</a></div></div></section>
+            
+            <!-- My Process Section -->
+            <section><div class="text-center mb-12"><p class="font-semibold text-accent-green-start">How It Works</p><h2 class="font-heading text-4xl md:text-5xl font-extrabold text-title-color">My Collaborative Process</h2></div><div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center"><div class="card !p-6"><div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-border-color font-heading text-2xl font-bold text-accent-green-start">1</div><h3 class="font-heading text-xl font-bold text-title-color">Discovery</h3><p class="text-sm">We define your goals and project scope.</p></div><div class="card !p-6"><div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-border-color font-heading text-2xl font-bold text-accent-green-start">2</div><h3 class="font-heading text-xl font-bold text-title-color">Design</h3><p class="text-sm">I create wireframes and mockups for approval.</p></div><div class="card !p-6"><div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-border-color font-heading text-2xl font-bold text-accent-green-start">3</div><h3 class="font-heading text-xl font-bold text-title-color">Develop</h3><p class="text-sm">I build your project with regular check-ins.</p></div><div class="card !p-6"><div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-border-color font-heading text-2xl font-bold text-accent-green-start">4</div><h3 class="font-heading text-xl font-bold text-title-color">Deploy</h3><p class="text-sm">We test, launch, and provide support.</p></div></div></section>
+
+            <!-- Featured Work Section -->
+            <section id="featured-work"><div class="text-center mb-12"><p class="font-semibold text-accent-green-start">Portfolio</p><h2 class="font-heading text-4xl md:text-5xl font-extrabold text-title-color">A Glimpse of My Work</h2></div><div class="card !p-8 flex flex-col lg:flex-row gap-8 items-center"><img src="../../static/images/Project 1.jpg" class="lg:w-1/2 w-full h-auto object-cover rounded-lg" alt="Featured Project"><div class="lg:w-1/2"><span class="px-3 py-1 bg-accent-green-start/10 text-accent-green-start text-sm font-bold rounded-full">E-Commerce</span><h3 class="font-heading text-3xl font-extrabold text-title-color my-4">Modern E-commerce Platform</h3><p>A comprehensive e-commerce site built with Django. It features a custom admin dashboard, secure payment gateway integration, and a responsive design that provides an excellent shopping experience on any device.</p><div class="flex flex-wrap gap-2 mt-4 text-xs font-mono"><span class="bg-border-color px-2 py-1 rounded">Django</span><span class="bg-border-color px-2 py-1 rounded">Python</span><span class="bg-border-color px-2 py-1 rounded">JavaScript</span><span class="bg-border-color px-2 py-1 rounded">Stripe API</span></div><div class="flex gap-4 mt-6"><a href="freelance_case_study.html" class="filled-btn"><i class="fas fa-book-open mr-2"></i>Case Study</a><a href="freelance_portfolio.html" class="outline-btn">More Projects</a></div></div></div></section>
+
+            <!-- Blog Section -->
+            <section id="blog"><div class="text-center mb-12"><p class="font-semibold text-accent-green-start">Insights & Articles</p><h2 class="font-heading text-4xl md:text-5xl font-extrabold text-title-color">From the <span class="text-gradient">Blog</span></h2></div><div class="grid grid-cols-1 md:grid-cols-3 gap-8"><a href="#" class="block card-clickable"><div class="card !p-0 overflow-hidden h-full flex flex-col"><img src="../../static/images/Blog-1.jpg" class="w-full h-56 object-cover" alt="Blog Post"><div class="p-6 flex flex-col flex-grow"><span class="text-sm text-accent-green-start font-semibold">Web Development</span><h3 class="font-heading text-xl font-bold text-title-color my-2">Why Django is My Go-To for Backend Development</h3><p class="text-sm text-paragraph-color/80 flex-grow">A deep dive into the features that make Django a powerhouse for building secure and scalable web applications quickly...</p><span class="outline-btn !py-1 !px-3 !text-xs mt-4 self-start">Read More</span></div></div></a><a href="#" class="block card-clickable"><div class="card !p-0 overflow-hidden h-full flex flex-col"><img src="../../static/images/Blog-2.jpg" class="w-full h-56 object-cover" alt="Blog Post"><div class="p-6 flex flex-col flex-grow"><span class="text-sm text-accent-green-start font-semibold">UI/UX Design</span><h3 class="font-heading text-xl font-bold text-title-color my-2">5 UI/UX Principles for a Better User Experience</h3><p class="text-sm text-paragraph-color/80 flex-grow">From consistency to hierarchy, these five fundamental design principles can transform your product from good to great...</p><span class="outline-btn !py-1 !px-3 !text-xs mt-4 self-start">Read More</span></div></div></a><a href="#" class="block card-clickable"><div class="card !p-0 overflow-hidden h-full flex flex-col"><img src="../../static/images/Blog-3.jpg" class="w-full h-56 object-cover" alt="Blog Post"><div class="p-6 flex flex-col flex-grow"><span class="text-sm text-accent-green-start font-semibold">Freelancing</span><h3 class="font-heading text-xl font-bold text-title-color my-2">How to Effectively Communicate with a Freelancer</h3><p class="text-sm text-paragraph-color/80 flex-grow">Clear communication is the key to a successful project. Here are tips for clients to get the best results from their freelance partners...</p><span class="outline-btn !py-1 !px-3 !text-xs mt-4 self-start">Read More</span></div></div></a></div></section>
+
+            <!-- Testimonials Section -->
+            <section><div class="text-center mb-12"><p class="font-semibold text-accent-green-start">Client Feedback</p><h2 class="font-heading text-4xl md:text-5xl font-extrabold text-title-color">What My Clients Say</h2></div><div class="grid grid-cols-1 md:grid-cols-2 gap-8"><div class="card !p-8"><i class="fas fa-quote-left text-4xl text-gradient mb-4"></i><blockquote class="italic text-lg">"The final website exceeded all our expectations. Roshan was professional, communicative, and delivered a product that has significantly boosted our online presence."</blockquote><div class="flex items-center mt-6 gap-4"><img src="https://i.pravatar.cc/100?img=12" class="w-14 h-14 rounded-full object-cover"><div class="text-left"><h4 class="font-heading text-lg font-bold text-title-color">Priya Mehta</h4><p>Founder, Tech Startup</p></div></div></div><div class="card !p-8"><i class="fas fa-quote-left text-4xl text-gradient mb-4"></i><blockquote class="italic text-lg">"An incredibly talented developer. The UI/UX work was top-notch, and the attention to detail was remarkable. I couldn't be happier with the result."</blockquote><div class="flex items-center mt-6 gap-4"><img src="https://i.pravatar.cc/100?img=3" class="w-14 h-14 rounded-full object-cover"><div class="text-left"><h4 class="font-heading text-lg font-bold text-title-color">John Carter</h4><p>Marketing Director</p></div></div></div></div></section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="w-full border-t border-border-color pt-16 pb-8"><!-- ... footer html ... --></footer>
+    </div>
+    <!-- Script -->
+    <script>/* ... base script ... */</script>
+</body>
+</html>

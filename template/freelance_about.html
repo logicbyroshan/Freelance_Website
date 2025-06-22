@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Roshan Freelance</title>
+    <meta name="description" content="Learn more about Roshan Damor, a passionate full-stack developer and designer dedicated to building high-quality digital solutions.">
+    <!-- Head content from freelance_base.html -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script><script src="https://kit.fontawesome.com/9da37a3f78.js" crossorigin="anonymous"></script><script>tailwind.config={theme:{extend:{colors:{'accent-green-start':'#10b981','accent-green-end':'#84cc16','title-color':'#f8fafc','paragraph-color':'#cbd5e1','card-bg':'#1e293b','border-color':'#334155','bg-dark':'#0f172a'},fontFamily:{heading:['Plus Jakarta Sans','sans-serif'],paragraph:['Lexend','sans-serif']},typography:({theme})=>({DEFAULT:{css:{'--tw-prose-body':theme('colors.paragraph-color'),'--tw-prose-headings':theme('colors.title-color'),'--tw-prose-links':theme('colors.accent-green-start'),'--tw-prose-bold':theme('colors.title-color'),'--tw-prose-bullets':theme('colors.accent-green-start'),'--tw-prose-hr':theme('colors.border-color'),'--tw-prose-quotes':theme('colors.title-color'),'--tw-prose-quote-borders':theme('colors.accent-green-start'),'--tw-prose-pre-code':theme('colors.paragraph-color'),'--tw-prose-pre-bg':theme('colors.bg-dark'),'--tw-prose-th-borders':theme('colors.border-color'),'--tw-prose-td-borders':theme('colors.border-color')}}})}}}</script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Lexend:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #0f172a; } .text-gradient { background-image: linear-gradient(to right, #10b981, #84cc16); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .card { background-color: #1e293b; border: 1px solid #334155; border-radius: 0.75rem; transition: all 300ms ease-in-out; }
+        .outline-btn { background-color: transparent; border: 1px solid #10b981; color: #10b981; padding: 0.7rem 1.5rem; border-radius: 0.5rem; font-weight: 600; transition: all 300ms ease-in-out; cursor: pointer; }
+        .outline-btn:hover { background-color: rgba(16, 185, 129, 0.1); }
+        .filled-btn { background-image: linear-gradient(to right, #10b981, #84cc16); color: #0f172a; padding: 0.75rem 1.75rem; border-radius: 0.5rem; font-weight: 700; transition: all 300ms ease-in-out; cursor: pointer; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2); }
+        .filled-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3); }
+        #profile-dropdown { display: none; } .profile.active #profile-dropdown { display: block; } #mobileNav { transform: translateX(100%); } #mobileNav.active { transform: translateX(0); }
+        .prose h1, .prose h2, .prose h3 { font-family: 'Plus Jakarta Sans', sans-serif; } .prose p, .prose li { font-family: 'Lexend', sans-serif; }
+    </style>
+</head>
+<body class="font-paragraph text-paragraph-color flex flex-col items-center p-4">
+
+    <div class="main-container w-full max-w-7xl flex flex-col gap-16">
+        <!-- Navbar -->
+        <nav class="navbar w-full" data-loggedin="true"><!-- ... navbar html ... --></nav>
+        <div id="mobileNav" class="fixed top-0 right-0 h-full w-72 bg-card-bg z-50 p-6 flex-col gap-6 text-lg transition-transform duration-300 md:hidden"><!-- ... mobile nav html ... --></div>
+        
+        <main class="w-full flex flex-col gap-16">
+            <header class="text-center">
+                <h1 class="font-heading text-5xl md:text-6xl font-extrabold text-title-color">About <span class="text-gradient">Me</span></h1>
+                <p class="max-w-2xl mx-auto mt-4 text-lg">I'm a developer and designer who bridges the gap between great ideas and brilliant execution.</p>
+            </header>
+
+            <section class="flex flex-col lg:flex-row gap-12 items-center">
+                <!-- Left Side: Image -->
+                <div class="lg:w-1/3 w-full">
+                    <img src="me.jpg" alt="Roshan Damor" class="rounded-2xl w-full h-auto object-cover border-2 border-border-color shadow-lg">
+                </div>
+                <!-- Right Side: Content -->
+                <div class="lg:w-2/3 w-full prose prose-lg max-w-none">
+                    <h2>My Journey in Code & Design</h2>
+                    <p>From the moment I wrote my first "Hello, World!" program, I was captivated by the power of code to bring ideas to life. My journey has been one of perpetual learning, driven by a passion for solving complex problems with elegant, user-centric solutions. I don't just build websites; I build digital experiences that are intuitive, performant, and designed to help my clients succeed.</p>
+                    <p>My philosophy is simple: listen carefully, communicate clearly, and deliver exceptional quality. I believe the best results come from a collaborative process where client vision and technical expertise meet.</p>
+                    
+                    <h3>My Tech Stack</h3>
+                    <p>I work with a variety of modern technologies to build the best possible product:</p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-border-color px-3 py-1 rounded font-mono text-sm">Python</span>
+                        <span class="bg-border-color px-3 py-1 rounded font-mono text-sm">Django</span>
+                        <span class="bg-border-color px-3 py-1 rounded font-mono text-sm">JavaScript</span>
+                        <span class="bg-border-color px-3 py-1 rounded font-mono text-sm">React</span>
+                        <span class="bg-border-color px-3 py-1 rounded font-mono text-sm">Node.js</span>
+                        <span class="bg-border-color px-3 py-1 rounded font-mono text-sm">Tailwind CSS</span>
+                        <span class="bg-border-color px-3 py-1 rounded font-mono text-sm">Figma</span>
+                        <span class="bg-border-color px-3 py-1 rounded font-mono text-sm">PostgreSQL</span>
+                    </div>
+
+                    <h3>Beyond the Code</h3>
+                    <p>When I'm not in front of a screen, I enjoy hiking, exploring new coffee shops, and working on personal creative coding projects. I believe a balanced life fuels creativity and problem-solving in my professional work.</p>
+                </div>
+            </section>
+            
+            <!-- CTA Section -->
+            <section class="card !p-8 md:!p-12 text-center">
+                 <h2 class="font-heading text-4xl font-extrabold text-title-color">Have a Project in Mind?</h2>
+                 <p class="max-w-xl mx-auto my-4">Let's turn your idea into a reality. I'm ready to collaborate with you on your next big thing.</p>
+                 <a href="freelance_contact.html" class="filled-btn mt-4">Let's Talk</a>
+            </section>
+
+        </main>
+        
+        <!-- Footer -->
+        <footer class="w-full border-t border-border-color pt-16 pb-8"><!-- ... footer html ... --></footer>
+    </div>
+
+    <!-- Script -->
+    <script>/* ... base script ... */</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: E-commerce Platform | Roshan Freelance</title>
+    <meta name="description" content="A deep-dive into the development of a modern e-commerce platform, showcasing the challenges, solutions, and technologies used.">
+    <!-- Head content from freelance_base.html -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script><script src="https://kit.fontawesome.com/9da37a3f78.js" crossorigin="anonymous"></script><script>tailwind.config={theme:{extend:{colors:{'accent-green-start':'#10b981','accent-green-end':'#84cc16','title-color':'#f8fafc','paragraph-color':'#cbd5e1','card-bg':'#1e293b','border-color':'#334155','bg-dark':'#0f172a'},fontFamily:{heading:['Plus Jakarta Sans','sans-serif'],paragraph:['Lexend','sans-serif']},typography:({theme})=>({DEFAULT:{css:{'--tw-prose-body':theme('colors.paragraph-color'),'--tw-prose-headings':theme('colors.title-color'),'--tw-prose-links':theme('colors.accent-green-start'),'--tw-prose-bold':theme('colors.title-color'),'--tw-prose-bullets':theme('colors.accent-green-start'),'--tw-prose-hr':theme('colors.border-color'),'--tw-prose-quotes':theme('colors.title-color'),'--tw-prose-quote-borders':theme('colors.accent-green-start'),'--tw-prose-pre-code':theme('colors.paragraph-color'),'--tw-prose-pre-bg':theme('colors.bg-dark'),'--tw-prose-th-borders':theme('colors.border-color'),'--tw-prose-td-borders':theme('colors.border-color')}}})}}}</script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Lexend:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #0f172a; } .text-gradient { background-image: linear-gradient(to right, #10b981, #84cc16); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .card { background-color: #1e293b; border: 1px solid #334155; border-radius: 0.75rem; transition: all 300ms ease-in-out; }
+        .outline-btn { background-color: transparent; border: 1px solid #10b981; color: #10b981; padding: 0.7rem 1.5rem; border-radius: 0.5rem; font-weight: 600; transition: all 300ms ease-in-out; cursor: pointer; }
+        .outline-btn:hover { background-color: rgba(16, 185, 129, 0.1); }
+        .filled-btn { background-image: linear-gradient(to right, #10b981, #84cc16); color: #0f172a; padding: 0.75rem 1.75rem; border-radius: 0.5rem; font-weight: 700; transition: all 300ms ease-in-out; cursor: pointer; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2); }
+        .filled-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3); }
+        #profile-dropdown { display: none; } .profile.active #profile-dropdown { display: block; } #mobileNav { transform: translateX(100%); } #mobileNav.active { transform: translateX(0); }
+        .prose h1, .prose h2, .prose h3 { font-family: 'Plus Jakarta Sans', sans-serif; } .prose p, .prose li { font-family: 'Lexend', sans-serif; }
+    </style>
+</head>
+<body class="font-paragraph text-paragraph-color flex flex-col items-center p-4">
+
+    <div class="main-container w-full max-w-7xl flex flex-col gap-16">
+        <!-- Navbar -->
+        <nav class="navbar w-full" data-loggedin="true"><!-- ... navbar html ... --></nav>
+        <div id="mobileNav" class="fixed top-0 right-0 h-full w-72 bg-card-bg z-50 p-6 flex-col gap-6 text-lg transition-transform duration-300 md:hidden"><!-- ... mobile nav html ... --></div>
+
+        <main class="flex flex-col lg:flex-row gap-12">
+            <!-- Main Content -->
+            <div class="w-full lg:w-2/3 flex flex-col gap-8">
+                <header>
+                    <h1 class="font-heading text-4xl md:text-6xl font-extrabold text-title-color leading-tight mb-4">Modern E-commerce <span class="text-gradient">Platform</span></h1>
+                </header>
+                <img src="../../static/images/Project-Case-Study-Hero.jpg" alt="Project Hero Image" class="w-full h-auto object-cover rounded-2xl border-2 border-border-color">
+                <article class="prose prose-lg max-w-none">
+                    <h2>The Challenge</h2>
+                    <p>The client, a growing fashion startup, needed a robust and scalable e-commerce website to showcase their products and handle online sales. Their previous solution was slow, difficult to manage, and offered a poor mobile experience, leading to high cart abandonment rates.</p>
+                    
+                    <h2>My Solution</h2>
+                    <p>I developed a full-stack solution from scratch using Django for the backend and React for the frontend. This approach provided a powerful, secure, and highly customizable platform. The primary focus was on three key areas: performance, user experience, and ease of management.</p>
+                    <ul>
+                        <li><i class="fas fa-bolt text-accent-green-start mr-2"></i><strong>Performance:</strong> Implemented server-side rendering and image optimization to ensure lightning-fast page loads.</li>
+                        <li><i class="fas fa-palette text-accent-green-start mr-2"></i><strong>User Experience:</strong> Designed a clean, intuitive interface with a seamless checkout process, which is fully responsive for an excellent experience on any device.</li>
+                        <li><i class="fas fa-cogs text-accent-green-start mr-2"></i><strong>Management:</strong> Built a custom admin dashboard allowing the client to easily manage products, orders, and inventory without any technical knowledge.</li>
+                    </ul>
+                    <blockquote>The goal was not just to build an online store, but to create a digital flagship that reflects the brand's quality and vision.</blockquote>
+                    
+                    <h2>Project Gallery</h2>
+                    <div class="grid grid-cols-2 gap-4 not-prose">
+                        <img src="../../static/images/Project 1.jpg" alt="Gallery image 1" class="rounded-lg border border-border-color">
+                        <img src="../../static/images/Project 2.jpg" alt="Gallery image 2" class="rounded-lg border border-border-color">
+                    </div>
+                </article>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="w-full lg:w-1/3 flex flex-col gap-8">
+                <div class="sticky top-8 flex flex-col gap-8">
+                    <!-- Project Info Card -->
+                    <div class="card !p-6">
+                        <h3 class="font-heading text-2xl font-bold text-title-color mb-6 border-b border-border-color pb-4">Project Details</h3>
+                        <div class="space-y-4 text-sm">
+                            <div class="flex justify-between"><strong>Client:</strong> <span class="text-paragraph-color/80">Fashion Startup Inc.</span></div>
+                            <div class="flex justify-between"><strong>Services:</strong> <span class="text-paragraph-color/80">Full-Stack Dev, UI/UX</span></div>
+                            <div class="flex justify-between"><strong>Timeline:</strong> <span class="text-paragraph-color/80">6 Weeks</span></div>
+                        </div>
+                        <h4 class="font-heading text-lg font-bold text-title-color mt-6 mb-3">Technology Stack</h4>
+                        <div class="flex flex-wrap gap-2 text-xs font-mono">
+                            <span class="bg-border-color px-2 py-1 rounded">Django</span>
+                            <span class="bg-border-color px-2 py-1 rounded">React</span>
+                            <span class="bg-border-color px-2 py-1 rounded">PostgreSQL</span>
+                            <span class="bg-border-color px-2 py-1 rounded">Stripe API</span>
+                            <span class="bg-border-color px-2 py-1 rounded">Tailwind CSS</span>
+                            <span class="bg-border-color px-2 py-1 rounded">AWS</span>
+                        </div>
+                        <div class="flex gap-4 mt-8">
+                            <a href="#" class="filled-btn w-full text-center"><i class="fas fa-eye mr-2"></i>Live Demo</a>
+                            <a href="#" class="outline-btn w-full text-center"><i class="fab fa-github mr-2"></i>View Code</a>
+                        </div>
+                    </div>
+                    <!-- Testimonial Card -->
+                    <div class="card !p-6">
+                        <i class="fas fa-quote-left text-4xl text-gradient mb-4"></i>
+                        <blockquote class="italic">"Roshan delivered a product that exceeded all our expectations. Our online sales have increased by 40% since launch, and our customers love the new site!"</blockquote>
+                        <div class="flex items-center mt-6 gap-4"><img src="https://i.pravatar.cc/100?img=12" class="w-12 h-12 rounded-full object-cover"><div class="text-left"><h4 class="font-heading text-lg font-bold text-title-color">Priya Mehta</h4><p class="text-sm">Founder, FSI</p></div></div>
+                    </div>
+                </div>
+            </aside>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="w-full border-t border-border-color pt-16 pb-8"><!-- ... footer html ... --></footer>
+    </div>
+    <script>/* ... base script ... */</script>
+</body>
+</html>

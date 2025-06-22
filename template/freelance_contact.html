@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | Roshan Freelance</title>
+    <!-- Head content from freelance_base.html -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script><script src="https://kit.fontawesome.com/9da37a3f78.js" crossorigin="anonymous"></script><script>tailwind.config={theme:{extend:{colors:{'accent-green-start':'#10b981','accent-green-end':'#84cc16','title-color':'#f8fafc','paragraph-color':'#cbd5e1','card-bg':'#1e293b','border-color':'#334155','bg-dark':'#0f172a'},fontFamily:{heading:['Plus Jakarta Sans','sans-serif'],paragraph:['Lexend','sans-serif']},typography:({theme})=>({DEFAULT:{css:{}}})}}}</script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Lexend:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #0f172a; } .text-gradient { background-image: linear-gradient(to right, #10b981, #84cc16); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .card { background-color: #1e293b; border: 1px solid #334155; border-radius: 0.75rem; transition: all 300ms ease-in-out; }
+        .outline-btn { background-color: transparent; border: 1px solid #10b981; color: #10b981; padding: 0.7rem 1.5rem; border-radius: 0.5rem; font-weight: 600; transition: all 300ms ease-in-out; cursor: pointer; }
+        .outline-btn:hover { background-color: rgba(16, 185, 129, 0.1); }
+        .filled-btn { background-image: linear-gradient(to right, #10b981, #84cc16); color: #0f172a; padding: 0.75rem 1.75rem; border-radius: 0.5rem; font-weight: 700; transition: all 300ms ease-in-out; cursor: pointer; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2); }
+        .filled-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3); }
+        #profile-dropdown { display: none; } .profile.active #profile-dropdown { display: block; } #mobileNav { transform: translateX(100%); } #mobileNav.active { transform: translateX(0); }
+    </style>
+</head>
+<body class="font-paragraph text-paragraph-color flex flex-col items-center p-4">
+
+    <div class="main-container w-full max-w-7xl flex flex-col gap-16">
+        <!-- Navbar -->
+        <nav class="navbar w-full" data-loggedin="true"><div class="flex justify-between items-center py-4"><a href="freelance_home.html" class="flex items-center gap-3"><img src="../../local_static/images/logo.png" alt="Logo" class="h-10 w-10"><p class="font-heading text-2xl font-bold text-title-color">Roshan</p></a><div class="hidden md:flex items-center gap-8 font-semibold text-sm"><a href="freelance_home.html" class="hover:text-accent-green-start">Home</a><a href="freelance_services_list.html" class="hover:text-accent-green-start">Services</a><a href="freelance_portfolio.html" class="hover:text-accent-green-start">Portfolio</a><a href="freelance_about.html" class="hover:text-accent-green-start">About</a><a href="freelance_portfolio.html#blog" class="hover:text-accent-green-start">Blog</a><a href="freelance_contact.html" class="hover:text-accent-green-start text-accent-green-start">Contact</a></div><div class="hidden md:flex items-center gap-4" id="authSection"></div><div class="md:hidden"><i class="fas fa-bars text-2xl cursor-pointer" id="menuToggle"></i></div></div></nav>
+        <div id="mobileNav" class="fixed top-0 right-0 h-full w-72 bg-card-bg z-50 p-6 flex-col gap-6 text-lg transition-transform duration-300 md:hidden"><div class="flex justify-end mb-4"><i id="closeMenu" class="fa-solid fa-xmark text-3xl cursor-pointer p-2 hover:text-accent-green-start"></i></div><a href="freelance_home.html" class="block py-2 hover:text-accent-green-start">Home</a><a href="freelance_services_list.html" class="block py-2 hover:text-accent-green-start">Services</a><a href="freelance_portfolio.html" class="block py-2 hover:text-accent-green-start">Portfolio</a><a href="freelance_about.html" class="block py-2 hover:text-accent-green-start">About</a><a href="freelance_portfolio.html#blog" class="block py-2 hover:text-accent-green-start">Blog</a><a href="freelance_contact.html" class="block py-2 hover:text-accent-green-start text-accent-green-start">Contact</a><div class="border-t border-border-color mt-4 pt-4" id="mobileAuth"></div></div>
+        
+        <main class="w-full flex flex-col gap-16">
+            <header class="text-center">
+                <h1 class="font-heading text-5xl md:text-6xl font-extrabold text-title-color">Let's Build <span class="text-gradient">Together</span></h1>
+                <p class="max-w-2xl mx-auto mt-4 text-lg">Have a project in mind or just want to ask a question? I'm here to help. Fill out the form below or use one of the contact methods to get in touch.</p>
+            </header>
+
+            <section class="card !p-8 md:!p-12">
+                <div class="flex flex-col lg:flex-row gap-12 items-start">
+                    <!-- Left Side: Contact Info -->
+                    <div class="lg:w-1/3 w-full">
+                        <h2 class="font-heading text-3xl font-bold text-title-color mb-6">Contact Information</h2>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4"><i class="fas fa-envelope text-2xl text-accent-green-start mt-1"></i><div><h4 class="font-semibold text-title-color">Email</h4><a href="mailto:contact@roshan.dev" class="text-paragraph-color/80 hover:text-accent-green-start">contact@roshan.dev</a></div></div>
+                            <div class="flex items-start gap-4"><i class="fas fa-phone-alt text-2xl text-accent-green-start mt-1"></i><div><h4 class="font-semibold text-title-color">Phone</h4><p class="text-paragraph-color/80">+1 (555) 123-4567</p></div></div>
+                            <div class="flex items-start gap-4"><i class="fas fa-calendar-alt text-2xl text-accent-green-start mt-1"></i><div><h4 class="font-semibold text-title-color">Schedule a Call</h4><p class="text-paragraph-color/80">Book a free 30-minute discovery call.</p><a href="#" class="outline-btn !py-1 !px-3 !text-xs mt-2">Book Now</a></div></div>
+                        </div>
+                    </div>
+                    <!-- Right Side: Form -->
+                    <div class="lg:w-2/3 w-full">
+                        <h2 class="font-heading text-3xl font-bold text-title-color mb-6">Send Me a Message</h2>
+                        <!-- The Form -->
+                        <form id="contact-form" class="flex flex-col gap-4">
+                            <!-- Honeypot field for spam prevention -->
+                            <div class="hidden">
+                                <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <input type="text" name="name" placeholder="Your Name" required class="p-3 bg-bg-dark border border-border-color rounded-lg focus:outline-none focus:border-accent-green-start text-white">
+                                <input type="email" name="email" placeholder="Your Email" required class="p-3 bg-bg-dark border border-border-color rounded-lg focus:outline-none focus:border-accent-green-start text-white">
+                            </div>
+                            <select name="service" required class="p-3 bg-bg-dark border border-border-color rounded-lg focus:outline-none focus:border-accent-green-start text-white"><option value="" disabled selected>What service are you interested in?</option><option value="web-dev">Web Development</option><option value="ui-ux">UI/UX Design</option><option value="api">API Integration</option><option value="other">Other</option></select>
+                            <textarea name="message" rows="6" placeholder="Tell me about your project..." required class="p-3 bg-bg-dark border border-border-color rounded-lg resize-none focus:outline-none focus:border-accent-green-start text-white"></textarea>
+                            <button type="submit" class="filled-btn self-start">Send Message</button>
+                        </form>
+                        <!-- Success Message -->
+                        <div id="success-message" class="hidden card !bg-bg-dark !border-accent-green-start/50 !p-8 text-center">
+                            <i class="fas fa-check-circle text-5xl text-accent-green-start mb-4"></i>
+                            <h3 class="font-heading text-2xl font-bold text-title-color">Message Sent!</h3>
+                            <p class="text-paragraph-color/80 mt-2">Thank you for reaching out. I'll get back to you as soon as possible.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="w-full border-t border-border-color pt-16 pb-8"><!-- ... footer html ... --></footer>
+    </div>
+
+    <script>
+        // --- Base Script (for navbar, dropdowns, etc.) ---
+        /* ... existing base script ... */
+
+        // --- Contact Form Submission Script ---
+        const contactForm = document.getElementById('contact-form');
+        const successMessage = document.getElementById('success-message');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                const formData = new FormData(contactForm);
+                const honeypot = formData.get('bot-field');
+
+                // Simple honeypot check
+                if (honeypot) {
+                    console.log('Bot detected!');
+                    return; 
+                }
+
+                // Here you would typically send the data to a server endpoint
+                // e.g., using fetch() to post to a service like Formspree or a custom API
+                // For this example, we'll just simulate success.
+                console.log('Form submitted successfully!');
+                console.log({
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    service: formData.get('service'),
+                    message: formData.get('message')
+                });
+                
+                // Hide the form and show the success message
+                contactForm.style.display = 'none';
+                if (successMessage) {
+                    successMessage.classList.remove('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

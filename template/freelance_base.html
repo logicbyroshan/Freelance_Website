@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roshan Freelance | Professional Web Services</title>
+    
+    <!-- Tailwind CSS with Typography Plugin -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/9da37a3f78.js" crossorigin="anonymous"></script>
+
+    <!-- Custom Tailwind Theme and Fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'accent-green-start': '#10b981', // Emerald
+                        'accent-green-end': '#84cc16',   // Lime
+                        'title-color': '#f8fafc',
+                        'paragraph-color': '#cbd5e1',
+                        'card-bg': '#1e293b',
+                        'border-color': '#334155',
+                        'bg-dark': '#0f172a',
+                    },
+                    fontFamily: {
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                        paragraph: ['Lexend', 'sans-serif'],
+                    },
+                    typography: ({ theme }) => ({ DEFAULT: { css: {} } }),
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Lexend:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- COMPLETE CSS BLOCK FOR CONSISTENCY -->
+    <style>
+        body { background-color: #0f172a; }
+        .text-gradient { background-image: linear-gradient(to right, theme('colors.accent-green-start'), theme('colors.accent-green-end')); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .card { background-color: #1e293b; border: 1px solid #334155; border-radius: 0.75rem; transition: all 300ms ease-in-out; }
+        .card-clickable:hover { transform: translateY(-5px); border-color: #10b981; }
+        .outline-btn { background-color: transparent; border: 1px solid #10b981; color: #10b981; padding: 0.7rem 1.5rem; border-radius: 0.5rem; font-weight: 600; transition: all 300ms ease-in-out; cursor: pointer; }
+        .outline-btn:hover { background-color: rgba(16, 185, 129, 0.1); }
+        .filled-btn { background-image: linear-gradient(to right, theme('colors.accent-green-start'), theme('colors.accent-green-end')); color: #0f172a; padding: 0.75rem 1.75rem; border-radius: 0.5rem; font-weight: 700; transition: all 300ms ease-in-out; cursor: pointer; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2); }
+        .filled-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3); }
+        #profile-dropdown { display: none; } .profile.active #profile-dropdown { display: block; }
+        #mobileNav { transform: translateX(100%); } #mobileNav.active { transform: translateX(0); }
+    </style>
+</head>
+<body class="font-paragraph text-paragraph-color flex flex-col items-center p-4">
+
+    <div class="main-container w-full max-w-7xl flex flex-col gap-24">
+        <!-- Navbar -->
+        <nav class="navbar w-full" data-loggedin="true">
+            <div class="flex justify-between items-center py-4">
+                <a href="freelance_home.html" class="flex items-center gap-3"><img src="../../local_static/images/logo.png" alt="Logo" class="h-10 w-10"><p class="font-heading text-2xl font-bold text-title-color">Roshan</p></a>
+                <div class="hidden md:flex items-center gap-8 font-semibold text-sm"><a href="freelance_home.html" class="hover:text-accent-green-start">Home</a><a href="freelance_services_list.html" class="hover:text-accent-green-start">Services</a><a href="freelance_portfolio.html" class="hover:text-accent-green-start">Portfolio</a><a href="freelance_contact.html" class="hover:text-accent-green-start">Contact</a></div>
+                <div class="hidden md:flex items-center gap-4" id="authSection"></div>
+                <div class="md:hidden"><i class="fas fa-bars text-2xl cursor-pointer" id="menuToggle"></i></div>
+            </div>
+        </nav>
+        <div id="mobileNav" class="fixed top-0 right-0 h-full w-72 bg-card-bg z-50 p-6 flex-col gap-6 text-lg transition-transform duration-300 md:hidden"><div class="flex justify-end mb-4"><i id="closeMenu" class="fa-solid fa-xmark text-3xl cursor-pointer p-2 hover:text-accent-green-start"></i></div><a href="freelance_home.html" class="block py-2 hover:text-accent-green-start">Home</a><a href="freelance_services_list.html" class="block py-2 hover:text-accent-green-start">Services</a><a href="freelance_portfolio.html" class="block py-2 hover:text-accent-green-start">Portfolio</a><a href="freelance_contact.html" class="block py-2 hover:text-accent-green-start">Contact</a><div class="border-t border-border-color mt-4 pt-4" id="mobileAuth"></div></div>
+
+        <main><h1 class="text-4xl font-heading text-center text-title-color">Page Content Here</h1></main>
+        
+        <!-- Footer -->
+        <footer class="w-full border-t border-border-color pt-16 pb-8"><div class="grid grid-cols-1 md:grid-cols-12 gap-8"><div class="md:col-span-5"><a href="freelance_home.html" class="flex items-center gap-3 mb-4"><img src="../../local_static/images/logo.png" alt="Logo" class="h-10 w-10"><p class="font-heading text-2xl font-bold text-title-color">Roshan | Freelance</p></a><p class="text-sm max-w-xs text-paragraph-color/80">Crafting high-performance digital solutions to elevate your business.</p></div><div class="md:col-span-2"><h3 class="font-heading text-lg text-title-color font-bold mb-4">Quick Links</h3><ul class="space-y-2 text-sm"><li><a href="freelance_services_list.html" class="hover:text-accent-green-start">Services</a></li><li><a href="freelance_portfolio.html" class="hover:text-accent-green-start">Portfolio</a></li><li><a href="freelance_contact.html" class="hover:text-accent-green-start">Contact</a></li></ul></div><div class="md:col-span-5"><h3 class="font-heading text-lg text-title-color font-bold mb-4">Start a Conversation</h3><p class="text-sm mb-4 text-paragraph-color/80">Ready to build something amazing? Let's talk about your project.</p><a href="freelance_contact.html" class="filled-btn">Get a Free Quote</a></div></div><div class="text-center border-t border-border-color/50 pt-8 mt-16"><p class="text-sm text-paragraph-color/70">Copyright © 2024 Roshan Damor. All Rights Reserved.</p></div></footer>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navbar = document.querySelector('.navbar'); if (!navbar) return;
+            const isLoggedIn = navbar.dataset.loggedin === 'true';
+            const desktopAuthContainer = document.getElementById('authSection');
+            const mobileAuthContainer = document.getElementById('mobileAuth');
+            if (desktopAuthContainer && mobileAuthContainer) {
+                if (isLoggedIn) {
+                    const loggedInHTML = `<div class="logged-in"><div class="profile relative"><img src="../../local_static/images/Profile Pic.jpg" alt="Profile" id="profile-img-js" class="h-10 w-10 rounded-full object-cover cursor-pointer border-2 border-border-color"><div id="profile-dropdown-js" class="profile-dropdown hidden absolute top-12 right-0 bg-card-bg rounded-lg shadow-lg z-20 w-48 border border-border-color"><ul class="py-2"><li><a href="#" class="block px-4 py-2 text-sm hover:bg-border-color">Dashboard</a></li><li><a href="#" class="block px-4 py-2 text-sm text-red-400 hover:bg-border-color">Logout</a></li></ul></div></div></div>`;
+                    desktopAuthContainer.innerHTML = loggedInHTML;
+                    mobileAuthContainer.innerHTML = `<a href="#" class="block py-2">Dashboard</a><a href="#" class="block py-2 text-red-400">Logout</a>`;
+                } else {
+                    const notLoggedInHTML = `<a href="#" class="font-semibold text-sm hover:text-accent-green-start">Login</a><a href="freelance_contact.html" class="filled-btn !text-sm !py-2 !px-4">Get a Quote</a>`;
+                    desktopAuthContainer.innerHTML = notLoggedInHTML;
+                    mobileAuthContainer.innerHTML = `<a href="freelance_contact.html" class="filled-btn w-full text-center">Get a Quote</a>`;
+                }
+            }
+            const menuToggle = document.getElementById('menuToggle'); const mobileNav = document.getElementById('mobileNav'); const closeMenu = document.getElementById('closeMenu');
+            if (menuToggle && mobileNav) menuToggle.addEventListener('click', () => mobileNav.classList.add('active'));
+            if (closeMenu && mobileNav) closeMenu.addEventListener('click', () => mobileNav.classList.remove('active'));
+            const profileImg = document.getElementById('profile-img-js'); const profileDropdown = document.getElementById('profile-dropdown-js');
+            if (profileImg && profileDropdown) {
+                profileImg.addEventListener('click', (e) => { e.stopPropagation(); profileDropdown.classList.toggle('hidden'); profileContainer.classList.toggle('active'); });
+                document.addEventListener('click', (e) => {
+                    const profileContainer = profileImg.closest('.profile');
+                    if (profileContainer && !profileContainer.contains(e.target)) { profileDropdown.classList.add('hidden'); profileContainer.classList.remove('active'); }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

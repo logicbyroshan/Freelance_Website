@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Services | Roshan Freelance</title>
+    <!-- Head content from freelance_base.html -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script><script src="https://kit.fontawesome.com/9da37a3f78.js" crossorigin="anonymous"></script><script>tailwind.config={theme:{extend:{colors:{'accent-green-start':'#10b981','accent-green-end':'#84cc16','title-color':'#f8fafc','paragraph-color':'#cbd5e1','card-bg':'#1e293b','border-color':'#334155','bg-dark':'#0f172a'},fontFamily:{heading:['Plus Jakarta Sans','sans-serif'],paragraph:['Lexend','sans-serif']},typography:({theme})=>({DEFAULT:{css:{}}})}}}</script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Lexend:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #0f172a; } .text-gradient { background-image: linear-gradient(to right, #10b981, #84cc16); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .card { background-color: #1e293b; border: 1px solid #334155; border-radius: 0.75rem; transition: all 300ms ease-in-out; } .card-clickable:hover { transform: translateY(-5px); border-color: #10b981; }
+        .outline-btn { background-color: transparent; border: 1px solid #10b981; color: #10b981; padding: 0.7rem 1.5rem; border-radius: 0.5rem; font-weight: 600; transition: all 300ms ease-in-out; cursor: pointer; }
+        .outline-btn:hover { background-color: rgba(16, 185, 129, 0.1); }
+        .filled-btn { background-image: linear-gradient(to right, #10b981, #84cc16); color: #0f172a; padding: 0.75rem 1.75rem; border-radius: 0.5rem; font-weight: 700; transition: all 300ms ease-in-out; cursor: pointer; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2); }
+        .filled-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3); }
+        #profile-dropdown { display: none; } .profile.active #profile-dropdown { display: block; } #mobileNav { transform: translateX(100%); } #mobileNav.active { transform: translateX(0); }
+    </style>
+</head>
+<body class="font-paragraph text-paragraph-color flex flex-col items-center p-4">
+
+    <div class="main-container w-full max-w-7xl flex flex-col gap-16">
+        <!-- Navbar -->
+        <nav class="navbar w-full" data-loggedin="true"><!-- ... navbar html ... --></nav>
+        <div id="mobileNav" class="fixed top-0 right-0 h-full w-72 bg-card-bg z-50 p-6 flex-col gap-6 text-lg transition-transform duration-300 md:hidden"><!-- ... mobile nav html ... --></div>
+
+        <main class="w-full flex flex-col gap-16">
+            <header class="text-center">
+                <h1 class="font-heading text-5xl md:text-6xl font-extrabold text-title-color">My <span class="text-gradient">Services</span></h1>
+                <p class="max-w-2xl mx-auto mt-4 text-lg">A complete range of development and design services to bring your vision to life. Each service is tailored to meet your unique business needs.</p>
+            </header>
+
+            <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1: Full Stack Development -->
+                <div class="card card-clickable !p-8 flex flex-col" onclick="window.location.href='freelance_service_dtl.html'">
+                    <i class="fas fa-layer-group text-4xl text-gradient mb-4"></i>
+                    <h2 class="font-heading text-2xl font-bold text-title-color">Full-Stack Development</h2>
+                    <p class="text-paragraph-color/80 my-4 flex-grow">End-to-end web application development, from database to user interface.</p>
+                    <ul class="text-left space-y-2 mb-6 text-sm">
+                        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent-green-start mt-1"></i><span>Custom Backend & API</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent-green-start mt-1"></i><span>Interactive Frontend</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent-green-start mt-1"></i><span>Database Integration</span></li>
+                    </ul>
+                    <a href="freelance_service_dtl.html" class="outline-btn text-center mt-auto">View Details</a>
+                </div>
+
+                <!-- Service Card 2: UI/UX Design -->
+                <div class="card card-clickable !p-8 flex flex-col" onclick="window.location.href='freelance_service_dtl.html'">
+                    <i class="fas fa-drafting-compass text-4xl text-gradient mb-4"></i>
+                    <h2 class="font-heading text-2xl font-bold text-title-color">UI/UX Design</h2>
+                    <p class="text-paragraph-color/80 my-4 flex-grow">Creating intuitive and beautiful user experiences that engage and convert.</p>
+                    <ul class="text-left space-y-2 mb-6 text-sm">
+                        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent-green-start mt-1"></i><span>Wireframing & Prototyping</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent-green-start mt-1"></i><span>User Flow Mapping</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent-green-start mt-1"></i><span>High-Fidelity Mockups</span></li>
+                    </ul>
+                    <a href="freelance_service_dtl.html" class="outline-btn text-center mt-auto">View Details</a>
+                </div>
+
+                <!-- Service Card 3: SEO & Performance -->
+                <div class="card card-clickable !p-8 flex flex-col" onclick="window.location.href='freelance_service_dtl.html'">
+                    <i class="fas fa-rocket text-4xl text-gradient mb-4"></i>
+                    <h2 class="font-heading text-2xl font-bold text-title-color">SEO & Performance</h2>
+                    <p class="text-paragraph-color/80 my-4 flex-grow">Optimizing your site for search engines and lightning-fast load times.</p>
+                    <ul class="text-left space-y-2 mb-6 text-sm">
+                        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent-green-start mt-1"></i><span>On-Page SEO Audits</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent-green-start mt-1"></i><span>Speed Optimization</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-accent-green-start mt-1"></i><span>Technical SEO Fixes</span></li>
+                    </ul>
+                    <a href="freelance_service_dtl.html" class="outline-btn text-center mt-auto">View Details</a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="w-full border-t border-border-color pt-16 pb-8"><!-- ... footer html ... --></footer>
+    </div>
+    
+    <!-- Script -->
+    <script>/* ... base script ... */</script>
+</body>
+</html>

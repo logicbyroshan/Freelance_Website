@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard | Roshan Freelance</title>
+    <!-- Head content from freelance_base.html -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script><script src="https://kit.fontawesome.com/9da37a3f78.js" crossorigin="anonymous"></script><script>tailwind.config={theme:{extend:{colors:{'accent-green-start':'#10b981','accent-green-end':'#84cc16','title-color':'#f8fafc','paragraph-color':'#cbd5e1','card-bg':'#1e293b','border-color':'#334155','bg-dark':'#0f172a'},fontFamily:{heading:['Plus Jakarta Sans','sans-serif'],paragraph:['Lexend','sans-serif']},typography:({theme})=>({DEFAULT:{css:{}}})}}}</script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Lexend:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #0f172a; } .text-gradient { background-image: linear-gradient(to right, #10b981, #84cc16); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .card { background-color: #1e293b; border: 1px solid #334155; border-radius: 0.75rem; transition: all 300ms ease-in-out; }
+        .outline-btn { background-color: transparent; border: 1px solid #10b981; color: #10b981; padding: 0.7rem 1.5rem; border-radius: 0.5rem; font-weight: 600; transition: all 300ms ease-in-out; cursor: pointer; }
+        .outline-btn:hover { background-color: rgba(16, 185, 129, 0.1); }
+        .filled-btn { background-image: linear-gradient(to right, #10b981, #84cc16); color: #0f172a; padding: 0.75rem 1.75rem; border-radius: 0.5rem; font-weight: 700; transition: all 300ms ease-in-out; cursor: pointer; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2); }
+        .filled-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3); }
+        #profile-dropdown { display: none; } .profile.active #profile-dropdown { display: block; } #mobileNav { transform: translateX(100%); } #mobileNav.active { transform: translateX(0); }
+        .progress-bar-bg { background-color: #334155; } .progress-bar-fill { background-image: linear-gradient(to right, #10b981, #84cc16); }
+    </style>
+</head>
+<body class="font-paragraph text-paragraph-color flex flex-col items-center p-4">
+
+    <div class="main-container w-full max-w-7xl flex flex-col gap-16">
+        <!-- Navbar -->
+        <nav class="navbar w-full" data-loggedin="true"><!-- ... navbar html ... --></nav>
+        <div id="mobileNav" class="fixed top-0 right-0 h-full w-72 bg-card-bg z-50 p-6 flex-col gap-6 text-lg transition-transform duration-300 md:hidden"><!-- ... mobile nav html ... --></div>
+        
+        <main class="w-full flex flex-col gap-12">
+            <header class="text-center">
+                <h1 class="font-heading text-5xl md:text-6xl font-extrabold text-title-color">Client <span class="text-gradient">Dashboard</span></h1>
+                <p class="max-w-2xl mx-auto mt-4 text-lg">Welcome back, John! Here's an overview of your active projects and recent activity.</p>
+            </header>
+
+            <div class="flex flex-col md:flex-row gap-8 items-start">
+                <!-- Left Sidebar Navigation -->
+                <aside class="w-full md:w-1/4 lg:w-1/5 card !p-6 sticky top-8">
+                    <h3 class="font-heading text-xl font-bold text-title-color mb-4">Navigation</h3>
+                    <ul class="space-y-2 font-semibold text-sm">
+                        <li><a href="#" class="block p-3 rounded-md hover:bg-border-color transition-colors"><i class="fas fa-tachometer-alt w-6 mr-2"></i>Overview</a></li>
+                        <li><a href="#" class="block p-3 rounded-md bg-border-color text-title-color transition-colors"><i class="fas fa-tasks w-6 mr-2 text-accent-green-start"></i>Projects</a></li>
+                        <li><a href="#" class="block p-3 rounded-md hover:bg-border-color transition-colors"><i class="fas fa-file-invoice-dollar w-6 mr-2"></i>Invoices</a></li>
+                        <li><a href="#" class="block p-3 rounded-md hover:bg-border-color transition-colors"><i class="fas fa-folder w-6 mr-2"></i>Files</a></li>
+                        <li><a href="#" class="block p-3 rounded-md hover:bg-border-color transition-colors"><i class="fas fa-cog w-6 mr-2"></i>Settings</a></li>
+                    </ul>
+                </aside>
+                
+                <!-- Right Main Content -->
+                <section class="w-full md:w-3/4 lg:w-4/5 flex flex-col gap-8">
+                    <!-- Active Projects Section -->
+                    <h2 class="font-heading text-3xl font-bold text-title-color">Active Projects (1)</h2>
+                    <div class="card !p-6 flex flex-col gap-4">
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-3">
+                            <h3 class="font-heading text-2xl font-bold text-title-color">SaaS Analytics Dashboard</h3>
+                            <span class="px-3 py-1 bg-accent-green-start/10 text-accent-green-start text-xs font-bold rounded-full self-start">In Development</span>
+                        </div>
+                        <div>
+                            <p class="text-sm text-paragraph-color/80 mb-2">Overall Progress (60%)</p>
+                            <div class="w-full progress-bar-bg rounded-full h-3">
+                                <div class="progress-bar-fill h-3 rounded-full" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="border-t border-border-color pt-4 mt-2">
+                            <h4 class="font-semibold text-title-color mb-3">Project Milestones</h4>
+                            <ul class="space-y-2 text-sm">
+                                <li class="flex items-center gap-3 text-paragraph-color/50"><i class="fas fa-check-circle text-accent-green-start"></i><span class="line-through">Phase 1: Discovery & Wireframing</span></li>
+                                <li class="flex items-center gap-3 text-paragraph-color/50"><i class="fas fa-check-circle text-accent-green-start"></i><span class="line-through">Phase 2: UI Design & Mockups</span></li>
+                                <li class="flex items-center gap-3 text-title-color"><i class="fas fa-circle-notch fa-spin text-accent-green-start"></i><span>Phase 3: Frontend Development</span></li>
+                                <li class="flex items-center gap-3 text-paragraph-color/80"><i class="far fa-circle text-border-color"></i><span>Phase 4: Backend & API Integration</span></li>
+                                <li class="flex items-center gap-3 text-paragraph-color/80"><i class="far fa-circle text-border-color"></i><span>Phase 5: Testing & Deployment</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Recent Activity Section -->
+                    <h2 class="font-heading text-3xl font-bold text-title-color">Recent Activity</h2>
+                    <div class="card !p-6">
+                        <ul class="divide-y divide-border-color">
+                           <li class="py-3 flex items-start gap-4"><div class="text-accent-green-start pt-1"><i class="fas fa-comment-dots"></i></div><div><p class="font-semibold text-title-color">New message regarding 'Frontend Development' milestone.</p><p class="text-xs text-paragraph-color/70">Today at 11:42 AM</p></div></li>
+                           <li class="py-3 flex items-start gap-4"><div class="text-accent-green-start pt-1"><i class="fas fa-file-upload"></i></div><div><p class="font-semibold text-title-color">You uploaded <span class="text-accent-green-start">dashboard_mockup_v3.fig</span></p><p class="text-xs text-paragraph-color/70">Yesterday at 3:15 PM</p></div></li>
+                           <li class="py-3 flex items-start gap-4"><div class="text-accent-green-start pt-1"><i class="fas fa-check-circle"></i></div><div><p class="font-semibold text-title-color">Milestone 'UI Design & Mockups' was completed.</p><p class="text-xs text-paragraph-color/70">3 days ago</p></div></li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="w-full border-t border-border-color pt-16 pb-8"><!-- ... footer html ... --></footer>
+    </div>
+    <script>/* ... base script ... */</script>
+</body>
+</html>
